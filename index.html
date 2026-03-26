@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicioso - Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Delicioso</h1>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Delicioso</h2>
+            <p>Discover authentic flavors and culinary excellence</p>
+            <a href="menu.html" class="btn btn-primary">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Dishes</h2>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <div class="dish-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <h3>Margherita Pizza</h3>
+                    <p class="price">$12.99</p>
+                    <p class="description">Fresh mozzarella, basil, and tomato sauce</p>
+                    <button class="btn btn-small" onclick="addToCart('Margherita Pizza', 12.99)">Add to Cart</button>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <h3>Grilled Salmon</h3>
+                    <p class="price">$18.99</p>
+                    <p class="description">Pan-seared with herbs and lemon</p>
+                    <button class="btn btn-small" onclick="addToCart('Grilled Salmon', 18.99)">Add to Cart</button>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    <h3>Caesar Salad</h3>
+                    <p class="price">$9.99</p>
+                    <p class="description">Crisp romaine with parmesan and croutons</p>
+                    <button class="btn btn-small" onclick="addToCart('Caesar Salad', 9.99)">Add to Cart</button>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image" style="background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);"></div>
+                    <h3>Chocolate Cake</h3>
+                    <p class="price">$7.99</p>
+                    <p class="description">Rich and decadent chocolate layers</p>
+                    <button class="btn btn-small" onclick="addToCart('Chocolate Cake', 7.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Delicioso</h2>
+                <p>Delicioso is a premier restaurant dedicated to serving exceptional cuisine prepared with the finest ingredients. Our chef-driven approach ensures every dish is crafted with care and passion.</p>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Delicioso</h4>
+                    <p>Fine dining experience at its best.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Thu: 11AM - 11PM<br>Fri-Sat: 11AM - 1AM<br>Sun: 11AM - 10PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 123-4567<br>Email: info@delicioso.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delicioso. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

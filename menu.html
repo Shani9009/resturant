@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Delicioso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>Delicioso</h1>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="page-header">
+        <h1>Our Menu</h1>
+        <p>Discover our culinary creations</p>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-filters">
+                <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+                <button class="filter-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+                <button class="filter-btn" onclick="filterMenu('main')">Main Course</button>
+                <button class="filter-btn" onclick="filterMenu('sides')">Sides</button>
+                <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
+                <button class="filter-btn" onclick="filterMenu('beverages')">Beverages</button>
+            </div>
+
+            <!-- Appetizers -->
+            <div class="menu-category" id="appetizers">
+                <h2 class="category-title">Appetizers</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Bruschetta</h3>
+                            <span class="price">$6.99</span>
+                        </div>
+                        <p class="item-description">Toasted bread with tomato, garlic, and basil</p>
+                        <button class="btn btn-small" onclick="addToCart('Bruschetta', 6.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Calamari Fritti</h3>
+                            <span class="price">$8.99</span>
+                        </div>
+                        <p class="item-description">Golden fried squid rings with garlic aioli</p>
+                        <button class="btn btn-small" onclick="addToCart('Calamari Fritti', 8.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Spring Rolls</h3>
+                            <span class="price">$5.99</span>
+                        </div>
+                        <p class="item-description">Crispy rolls with vegetables and sweet chili sauce</p>
+                        <button class="btn btn-small" onclick="addToCart('Spring Rolls', 5.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Course -->
+            <div class="menu-category" id="main">
+                <h2 class="category-title">Main Course</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Margherita Pizza</h3>
+                            <span class="price">$12.99</span>
+                        </div>
+                        <p class="item-description">Fresh mozzarella, basil, and tomato sauce</p>
+                        <button class="btn btn-small" onclick="addToCart('Margherita Pizza', 12.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Grilled Salmon</h3>
+                            <span class="price">$18.99</span>
+                        </div>
+                        <p class="item-description">Pan-seared with herbs and lemon</p>
+                        <button class="btn btn-small" onclick="addToCart('Grilled Salmon', 18.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Filet Mignon</h3>
+                            <span class="price">$24.99</span>
+                        </div>
+                        <p class="item-description">Tender beef cut with seasonal vegetables</p>
+                        <button class="btn btn-small" onclick="addToCart('Filet Mignon', 24.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Pasta Carbonara</h3>
+                            <span class="price">$14.99</span>
+                        </div>
+                        <p class="item-description">Creamy sauce with bacon and parmesan</p>
+                        <button class="btn btn-small" onclick="addToCart('Pasta Carbonara', 14.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sides -->
+            <div class="menu-category" id="sides">
+                <h2 class="category-title">Sides</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Caesar Salad</h3>
+                            <span class="price">$9.99</span>
+                        </div>
+                        <p class="item-description">Crisp romaine with parmesan and croutons</p>
+                        <button class="btn btn-small" onclick="addToCart('Caesar Salad', 9.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Garlic Bread</h3>
+                            <span class="price">$4.99</span>
+                        </div>
+                        <p class="item-description">Toasted with butter and garlic</p>
+                        <button class="btn btn-small" onclick="addToCart('Garlic Bread', 4.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>French Fries</h3>
+                            <span class="price">$3.99</span>
+                        </div>
+                        <p class="item-description">Golden crispy fries with sea salt</p>
+                        <button class="btn btn-small" onclick="addToCart('French Fries', 3.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category" id="desserts">
+                <h2 class="category-title">Desserts</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Chocolate Cake</h3>
+                            <span class="price">$7.99</span>
+                        </div>
+                        <p class="item-description">Rich and decadent chocolate layers</p>
+                        <button class="btn btn-small" onclick="addToCart('Chocolate Cake', 7.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Tiramisu</h3>
+                            <span class="price">$6.99</span>
+                        </div>
+                        <p class="item-description">Classic Italian dessert with mascarpone cream</p>
+                        <button class="btn btn-small" onclick="addToCart('Tiramisu', 6.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Cheesecake</h3>
+                            <span class="price">$7.99</span>
+                        </div>
+                        <p class="item-description">Creamy New York style cheesecake</p>
+                        <button class="btn btn-small" onclick="addToCart('Cheesecake', 7.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-category" id="beverages">
+                <h2 class="category-title">Beverages</h2>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Iced Tea</h3>
+                            <span class="price">$2.99</span>
+                        </div>
+                        <p class="item-description">Refreshing cold iced tea</p>
+                        <button class="btn btn-small" onclick="addToCart('Iced Tea', 2.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Fresh Lemonade</h3>
+                            <span class="price">$3.99</span>
+                        </div>
+                        <p class="item-description">Freshly squeezed lemonade</p>
+                        <button class="btn btn-small" onclick="addToCart('Fresh Lemonade', 3.99)">Add to Cart</button>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header">
+                            <h3>Soft Drink</h3>
+                            <span class="price">$2.49</span>
+                        </div>
+                        <p class="item-description">Choice of cola, sprite, or fanta</p>
+                        <button class="btn btn-small" onclick="addToCart('Soft Drink', 2.49)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Delicioso</h4>
+                    <p>Fine dining experience at its best.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Mon-Thu: 11AM - 11PM<br>Fri-Sat: 11AM - 1AM<br>Sun: 11AM - 10PM</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Phone: (555) 123-4567<br>Email: info@delicioso.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delicioso. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
